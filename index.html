@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BMS Call Center – รายงานประจำสัปดาห์ 23–27 มี.ค. 2569</title>
+<meta name="description" content="รายงานผลการปฏิบัติงาน BMS Call Center สัปดาห์ที่ 13 วันที่ 23–27 มีนาคม 2569">
+<meta property="og:title" content="📊 รายงาน BMS Call Center | สัปดาห์ 23–27 มี.ค. 2569">
+<meta property="og:description" content="279 เคส · FCR 86.7% · Resolution 94.3% · 4 เจ้าหน้าที่">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#2563eb">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --blue-900:#1e3a8a;--blue-700:#1d4ed8;--blue-600:#2563eb;--blue-500:#3b82f6;
+  --blue-400:#60a5fa;--blue-300:#93c5fd;--blue-200:#bfdbfe;--blue-100:#dbeafe;--blue-50:#eff6ff;
+  --sky-500:#0ea5e9;--sky-400:#38bdf8;--sky-100:#e0f2fe;--sky-50:#f0f9ff;
+  --white:#ffffff;--gray-50:#f8fafc;--gray-100:#f1f5f9;--gray-200:#e2e8f0;
+  --gray-300:#cbd5e1;--gray-500:#64748b;--gray-700:#334155;--gray-900:#0f172a;
+  --success:#22c55e;--success-bg:#f0fdf4;--success-txt:#15803d;
+  --warn:#f59e0b;--warn-bg:#fffbeb;--warn-txt:#92400e;
+  --danger:#ef4444;--danger-bg:#fef2f2;--danger-txt:#b91c1c;
+  --info-bg:#eff6ff;--info-txt:#1d4ed8;
+  --bg:var(--gray-50);--card:var(--white);--border:var(--blue-100);
+  --radius:16px;--radius-sm:10px;
+  --shadow-sm:0 1px 3px rgba(37,99,235,0.07),0 1px 2px rgba(37,99,235,0.05);
+  --shadow-md:0 4px 16px rgba(37,99,235,0.11),0 2px 6px rgba(37,99,235,0.07);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Sarabun','Noto Sans Thai','Tahoma','Microsoft Sans Serif',sans-serif;
+  background:var(--bg);color:var(--gray-900);font-size:14px;
+  background-image:
+    radial-gradient(circle at 15% 0%,rgba(219,234,254,.55) 0%,transparent 45%),
+    radial-gradient(circle at 85% 100%,rgba(224,242,254,.35) 0%,transparent 45%);
+  background-attachment:fixed;
+}
+
+/* HERO */
+.hero{
+  background:linear-gradient(135deg,#1e3a8a 0%,#1d4ed8 45%,#0ea5e9 100%);
+  padding:36px 48px 30px;position:relative;overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse at 72% -25%,rgba(147,197,253,.22) 0%,transparent 50%),
+    radial-gradient(ellipse at 15% 115%,rgba(56,189,248,.14) 0%,transparent 48%);
+}
+.hero::after{
+  content:'';position:absolute;right:-55px;top:-55px;
+  width:260px;height:260px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.07);
+}
+.hi{position:relative;z-index:1;display:flex;align-items:flex-start;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.hbadge{
+  display:inline-flex;align-items:center;gap:6px;
+  background:rgba(255,255,255,.13);backdrop-filter:blur(8px);
+  border:1px solid rgba(255,255,255,.24);
+  padding:4px 14px;border-radius:20px;font-size:11px;color:rgba(255,255,255,.92);
+  margin-bottom:12px;
+}
+.dot{width:6px;height:6px;border-radius:50%;background:#7dd3fc;animation:blink 1.8s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.hero h1{font-size:27px;font-weight:800;color:#fff;line-height:1.2;margin-bottom:5px}
+.hero h1 em{font-style:normal;color:#bfdbfe}
+.hero-sub{font-size:13px;color:rgba(255,255,255,.7);margin-bottom:3px}
+.hero-note{font-size:11px;color:rgba(255,255,255,.42)}
+.hstats{display:flex;gap:10px;flex-wrap:wrap}
+.hs{
+  background:rgba(255,255,255,.12);backdrop-filter:blur(8px);
+  border:1px solid rgba(255,255,255,.19);
+  border-radius:13px;padding:14px 19px;text-align:center;min-width:106px;
+  transition:background .2s;
+}
+.hs:hover{background:rgba(255,255,255,.18)}
+.hs .v{font-size:25px;font-weight:800;color:#fff;line-height:1}
+.hs .l{font-size:10px;color:rgba(255,255,255,.6);margin-top:5px;line-height:1.4}
+
+/* SHARE BAR */
+.sbar{
+  background:#fff;border-bottom:1px solid var(--blue-100);
+  padding:9px 48px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+}
+.sbar-lbl{font-size:12px;font-weight:700;color:var(--blue-600)}
+.sbar-txt{font-size:11px;color:var(--gray-500)}
+.btn-pdf{
+  margin-left:auto;padding:6px 18px;border-radius:8px;
+  border:1.5px solid var(--blue-300);background:var(--blue-50);
+  color:var(--blue-700);font-family:inherit;font-size:11px;font-weight:700;
+  cursor:pointer;transition:all .18s;
+}
+.btn-pdf:hover{background:var(--blue-100);border-color:var(--blue-400)}
+
+/* CTRL */
+.ctrl{
+  background:rgba(255,255,255,.96);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--blue-100);
+  padding:11px 48px;display:flex;gap:14px;align-items:center;flex-wrap:wrap;
+  position:sticky;top:0;z-index:100;
+  box-shadow:0 2px 14px rgba(37,99,235,.07);
+}
+.ctrl-lbl{font-size:12px;font-weight:700;color:var(--blue-700)}
+.ctrl-sel{
+  padding:6px 28px 6px 11px;border-radius:9px;
+  border:1.5px solid var(--blue-200);background:var(--blue-50);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6' fill='none' stroke='%2360a5fa' stroke-width='1.5'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 9px center;
+  font-family:inherit;font-size:12px;color:var(--gray-700);
+  appearance:none;cursor:pointer;transition:all .18s;
+}
+.ctrl-sel:focus{outline:none;border-color:var(--blue-400);box-shadow:0 0 0 3px rgba(96,165,250,.18)}
+.ctrl-r{margin-left:auto;font-size:11px;color:var(--gray-500)}
+
+/* MAIN */
+.main{padding:28px 48px 52px;max-width:1580px;margin:0 auto}
+
+/* SEC TITLE */
+.sec{
+  font-size:10.5px;font-weight:700;color:var(--blue-400);
+  letter-spacing:2px;text-transform:uppercase;
+  margin-bottom:14px;display:flex;align-items:center;gap:10px;
+}
+.sec::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,var(--blue-200),transparent)}
+
+/* KPI */
+.kpi-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-bottom:28px}
+.kpi{
+  background:var(--white);border-radius:var(--radius);
+  border:1px solid var(--blue-100);padding:20px 18px 16px;
+  position:relative;overflow:hidden;box-shadow:var(--shadow-sm);
+  transition:transform .2s,box-shadow .2s;cursor:default;
+}
+.kpi:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+.kpi-bar{position:absolute;top:0;left:0;right:0;height:4px;border-radius:var(--radius) var(--radius) 0 0}
+.kpi-glow{position:absolute;top:-28px;right:-28px;width:80px;height:80px;border-radius:50%;opacity:.06}
+.kpi.bl .kpi-bar{background:linear-gradient(90deg,#3b82f6,#60a5fa)} .kpi.bl .kpi-glow{background:#3b82f6} .kpi.bl .kv{color:var(--blue-700)}
+.kpi.sk .kpi-bar{background:linear-gradient(90deg,#0ea5e9,#38bdf8)} .kpi.sk .kpi-glow{background:#0ea5e9} .kpi.sk .kv{color:#0369a1}
+.kpi.gn .kpi-bar{background:linear-gradient(90deg,#22c55e,#4ade80)} .kpi.gn .kpi-glow{background:#22c55e} .kpi.gn .kv{color:#15803d}
+.kpi.am .kpi-bar{background:linear-gradient(90deg,#f59e0b,#fbbf24)} .kpi.am .kpi-glow{background:#f59e0b} .kpi.am .kv{color:#b45309}
+.kpi.rd .kpi-bar{background:linear-gradient(90deg,#ef4444,#f87171)} .kpi.rd .kpi-glow{background:#ef4444} .kpi.rd .kv{color:#b91c1c}
+.kpi-ico{font-size:22px;margin-bottom:9px;display:block}
+.kpi-lbl{font-size:9.5px;font-weight:700;color:var(--gray-500);letter-spacing:.7px;text-transform:uppercase;margin-bottom:5px}
+.kv{font-size:32px;font-weight:800;line-height:1;margin-bottom:4px}
+.kpi-sub{font-size:11px;color:var(--gray-500);line-height:1.45;margin-bottom:10px}
+.badge{display:inline-flex;align-items:center;gap:3px;font-size:10px;font-weight:700;padding:3px 9px;border-radius:20px}
+.up{background:var(--success-bg);color:var(--success-txt)}
+.dn{background:var(--danger-bg);color:var(--danger-txt)}
+.nt{background:var(--info-bg);color:var(--info-txt)}
+.pbar{height:4px;background:var(--blue-50);border-radius:4px;margin-top:10px;overflow:hidden}
+.pfill{height:100%;border-radius:4px;transition:width .8s cubic-bezier(.4,0,.2,1)}
+
+/* INSIGHT */
+.ins-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:28px}
+.ins{
+  background:var(--white);border-radius:var(--radius-sm);
+  border:1px solid var(--blue-100);
+  padding:18px 18px 16px 22px;position:relative;overflow:hidden;
+  box-shadow:var(--shadow-sm);transition:box-shadow .2s;
+}
+.ins:hover{box-shadow:var(--shadow-md)}
+.ins-line{position:absolute;top:0;left:0;width:4px;height:100%}
+.ins.good .ins-line{background:linear-gradient(180deg,#22c55e,#4ade80)}
+.ins.alert .ins-line{background:linear-gradient(180deg,#ef4444,#f87171)}
+.ins.info .ins-line{background:linear-gradient(180deg,#3b82f6,#60a5fa)}
+.ins.warn .ins-line{background:linear-gradient(180deg,#f59e0b,#fbbf24)}
+.ins-ico{font-size:19px;margin-bottom:7px}
+.ins-type{font-size:9px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;margin-bottom:5px}
+.ins.good .ins-type{color:var(--success-txt)} .ins.alert .ins-type{color:var(--danger-txt)}
+.ins.info .ins-type{color:var(--info-txt)}    .ins.warn .ins-type{color:var(--warn-txt)}
+.ins-title{font-size:12.5px;font-weight:700;color:var(--gray-900);margin-bottom:6px;line-height:1.4}
+.ins-body{font-size:11.5px;color:var(--gray-500);line-height:1.7}
+
+/* CHARTS */
+.cr1{display:grid;grid-template-columns:1fr 1fr 1.1fr;gap:16px;margin-bottom:18px}
+.cr2{display:grid;grid-template-columns:1.65fr 1fr;gap:16px;margin-bottom:18px}
+.cc{background:var(--white);border-radius:var(--radius);border:1px solid var(--blue-100);padding:22px;box-shadow:var(--shadow-sm)}
+.cc-hdr{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px}
+.cc-ttl{font-size:13px;font-weight:700;color:var(--gray-900)}
+.cc-sub{font-size:10px;color:var(--gray-500);margin-top:2px}
+.cc-tag{font-size:9px;font-weight:700;padding:3px 10px;border-radius:20px;background:var(--blue-50);color:var(--blue-600);border:1px solid var(--blue-200);white-space:nowrap}
+.cw{position:relative;height:210px} .cw canvas{max-height:210px !important}
+.cw.tall{height:255px} .cw.tall canvas{max-height:255px !important}
+
+/* ISSUES */
+.issues{display:flex;flex-direction:column;gap:10px;margin-top:4px}
+.ir{display:flex;align-items:center;gap:9px}
+.irk{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;flex-shrink:0}
+.rk1{background:#dbeafe;color:#1d4ed8} .rk2{background:#e0f2fe;color:#0369a1} .rk3{background:#eff6ff;color:#2563eb}
+.rk4{background:#f0f9ff;color:#0284c7} .rk5{background:#f8fafc;color:#475569} .rk6{background:#f0fdf4;color:#15803d} .rk7{background:#fff7ed;color:#c2410c}
+.irlbl{font-size:11px;font-weight:600;color:var(--gray-700);min-width:120px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.irbw{flex:1;height:7px;background:var(--blue-50);border-radius:4px;overflow:hidden}
+.irb{height:100%;border-radius:4px}
+.irct{font-size:11px;font-weight:700;color:var(--blue-600);min-width:28px;text-align:right}
+
+/* TABLE */
+.tcard{background:var(--white);border-radius:var(--radius);border:1px solid var(--blue-100);overflow:hidden;margin-bottom:28px;box-shadow:var(--shadow-sm)}
+.tbl{width:100%;border-collapse:collapse;font-size:12px}
+.tbl th{background:var(--blue-50);padding:10px 14px;text-align:left;font-weight:700;color:var(--blue-600);font-size:10px;letter-spacing:.7px;text-transform:uppercase;border-bottom:1.5px solid var(--blue-100)}
+.tbl td{padding:10px 14px;border-bottom:1px solid var(--gray-100);color:var(--gray-700)}
+.tbl tr:last-child td{border-bottom:none} .tbl tr:hover td{background:var(--blue-50)}
+.pill{display:inline-block;padding:2px 10px;border-radius:20px;font-size:10px;font-weight:700}
+.pg{background:var(--success-bg);color:var(--success-txt)} .py{background:var(--warn-bg);color:var(--warn-txt)}
+.pr{background:var(--danger-bg);color:var(--danger-txt)}   .pb{background:var(--info-bg);color:var(--info-txt)}
+
+/* PROVINCE */
+.prov-list{display:flex;flex-direction:column;gap:8px;margin-top:6px}
+.prov-row{display:flex;align-items:center;gap:10px}
+.prov-name{font-size:11px;font-weight:600;color:var(--gray-700);min-width:100px}
+.prov-bw{flex:1;height:8px;background:var(--blue-50);border-radius:4px;overflow:hidden}
+.prov-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--blue-400),var(--sky-400));transition:width .7s cubic-bezier(.4,0,.2,1)}
+.prov-ct{font-size:11px;font-weight:700;color:var(--blue-600);min-width:24px;text-align:right}
+
+/* STATUS LEGEND */
+.stat-legend{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.sl-item{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--gray-500)}
+.sl-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0}
+
+/* FOOTER */
+.foot{text-align:center;padding:22px;font-size:11px;color:var(--gray-500);border-top:1px solid var(--blue-100);background:var(--white)}
+
+/* PRINT */
+@media print{
+  .ctrl,.sbar{display:none !important}
+  .hero{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .kpi,.cc,.ins,.tcard{break-inside:avoid}
+  body{background:#fff}
+}
+
+/* RESPONSIVE */
+@media(max-width:1200px){
+  .kpi-grid{grid-template-columns:repeat(3,1fr)}
+  .cr1{grid-template-columns:1fr 1fr}
+  .cr2{grid-template-columns:1fr}
+}
+@media(max-width:768px){
+  .hero,.sbar,.ctrl,.main{padding-left:18px;padding-right:18px}
+  .kpi-grid{grid-template-columns:1fr 1fr}
+  .cr1,.cr2{grid-template-columns:1fr}
+  .ins-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hi">
+    <div>
+      <div class="hbadge"><span class="dot"></span>&nbsp;ข้อมูลจริง · อัปเดต 29 มีนาคม 2569</div>
+      <h1>รายงานผลการปฏิบัติงาน<br><em>BMS Call Center</em></h1>
+      <div class="hero-sub">สัปดาห์ที่ 13 &nbsp;·&nbsp; 23–27 มีนาคม 2569 &nbsp;|&nbsp; ระบบ BMS-HOSxP Support</div>
+      <div class="hero-note">รายงานต่อผู้อำนวยการและผู้บริหาร · ข้อมูลจากระบบ Helpdesk จริง</div>
+    </div>
+    <div class="hstats">
+      <div class="hs"><div class="v">279</div><div class="l">เคสทั้งหมด<br>ประจำสัปดาห์</div></div>
+      <div class="hs"><div class="v">86.7%</div><div class="l">FCR Rate<br>(แก้จบครั้งเดียว)</div></div>
+      <div class="hs"><div class="v">4</div><div class="l">เจ้าหน้าที่<br>ทั้งหมด</div></div>
+      <div class="hs"><div class="v">78.5%</div><div class="l">โทรศัพท์<br>ช่องทางหลัก</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- SHARE BAR -->
+<div class="sbar">
+  <span class="sbar-lbl">📤 แชร์รายงานนี้:</span>
+  <span class="sbar-txt">ไฟล์ HTML นี้ส่งต่อทาง Email / Line / Drive ได้ทันที เปิดด้วย Browser ทุกชนิด ไม่ต้องติดตั้งโปรแกรม</span>
+  <button class="btn-pdf" onclick="window.print()">🖨 พิมพ์ / Save PDF</button>
+</div>
+
+<!-- CTRL -->
+<div class="ctrl">
+  <span class="ctrl-lbl">🔍 ช่องทาง:</span>
+  <select class="ctrl-sel" id="chanFilter" onchange="applyFilter()">
+    <option value="all">ทุกช่องทาง</option>
+    <option value="โทรศัพท์">📞 โทรศัพท์</option>
+    <option value="ช่องทาง E-mail">📧 E-mail</option>
+    <option value="ช่องทาง BMS Helpdesk">🖥 BMS Helpdesk</option>
+    <option value="ช่องทาง Line">💬 Line</option>
+    <option value="ช่องทาง Facebook">📘 Facebook</option>
+  </select>
+  <span class="ctrl-lbl">👤 เจ้าหน้าที่:</span>
+  <select class="ctrl-sel" id="agentFilter" onchange="applyFilter()">
+    <option value="all">ทุกคน</option>
+    <option value="เยาวรีย์ อินทร์พิทักษ์">เยาวรีย์ อินทร์พิทักษ์</option>
+    <option value="ประภัสสร พรมสุข">ประภัสสร พรมสุข</option>
+    <option value="เอมอร  สมหวัง">เอมอร สมหวัง</option>
+    <option value="ชัชมนต์  เชาว์วรรธนะสกุล">ชัชมนต์ เชาว์วรรธนะสกุล</option>
+  </select>
+  <div class="ctrl-r">⏱ ข้อมูล ณ วันที่ 29 มี.ค. 2569 &nbsp;·&nbsp; 279 เคสทั้งหมด</div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+<div class="sec">KPI หลัก &nbsp;·&nbsp; ประจำสัปดาห์ 23–27 มีนาคม 2569</div>
+<div class="kpi-grid">
+  <div class="kpi bl"><div class="kpi-bar"></div><div class="kpi-glow"></div>
+    <span class="kpi-ico">📋</span>
+    <div class="kpi-lbl">เคสทั้งหมด</div>
+    <div class="kv" id="kv-total">279</div>
+    <div class="kpi-sub">จำนวน Ticket รับสัปดาห์นี้</div>
+    <span class="badge nt" id="kb-total">📅 จ.–ศ. 23–27 มี.ค.</span>
+  </div>
+  <div class="kpi sk"><div class="kpi-bar"></div><div class="kpi-glow"></div>
+    <span class="kpi-ico">✅</span>
+    <div class="kpi-lbl">FCR Rate</div>
+    <div class="kv" id="kv-fcr">86.7%</div>
+    <div class="kpi-sub">แก้ปัญหาจบในครั้งเดียว</div>
+    <span class="badge up" id="kb-fcr">▲ เกิน Benchmark 75%</span>
+    <div class="pbar"><div class="pfill" id="kp-fcr" style="width:86.7%;background:linear-gradient(90deg,#0ea5e9,#38bdf8)"></div></div>
+  </div>
+  <div class="kpi gn"><div class="kpi-bar"></div><div class="kpi-glow"></div>
+    <span class="kpi-ico">🏆</span>
+    <div class="kpi-lbl">Resolution Rate</div>
+    <div class="kv" id="kv-res">94.3%</div>
+    <div class="kpi-sub">แก้ไขได้ (รวม Remote)</div>
+    <span class="badge up" id="kb-res">▲ 263/279 เคส</span>
+    <div class="pbar"><div class="pfill" id="kp-res" style="width:94.3%;background:linear-gradient(90deg,#22c55e,#4ade80)"></div></div>
+  </div>
+  <div class="kpi am"><div class="kpi-bar"></div><div class="kpi-glow"></div>
+    <span class="kpi-ico">⚠️</span>
+    <div class="kpi-lbl">Escalation Rate</div>
+    <div class="kv" id="kv-esc">3.2%</div>
+    <div class="kpi-sub">ส่งต่อฝ่ายอื่น (9 เคส)</div>
+    <span class="badge nt" id="kb-esc">● ต้องติดตาม Root Cause</span>
+  </div>
+  <div class="kpi rd"><div class="kpi-bar"></div><div class="kpi-glow"></div>
+    <span class="kpi-ico">⏳</span>
+    <div class="kpi-lbl">Pending Cases</div>
+    <div class="kv" id="kv-pend">4</div>
+    <div class="kpi-sub">กำลังดำเนินการ / ยังค้างอยู่</div>
+    <span class="badge dn" id="kb-pend">⚠️ ต้องติดตามเร่งด่วน</span>
+  </div>
+</div>
+
+<div class="sec">การวิเคราะห์และข้อเสนอแนะ</div>
+<div class="ins-grid">
+  <div class="ins good"><div class="ins-line"></div>
+    <div class="ins-ico">🎯</div>
+    <div class="ins-type">✅ จุดแข็ง</div>
+    <div class="ins-title">FCR 86.7% — เกิน Benchmark อุตสาหกรรมที่ 75%</div>
+    <div class="ins-body">เจ้าหน้าที่สามารถแก้ปัญหาจบในครั้งเดียวสูงถึง 86.7% สะท้อนว่าทีมมีความรู้ระบบ HOSxP ในระดับดีมาก และ Knowledge Base ครอบคลุมปัญหาที่พบบ่อย</div>
+  </div>
+  <div class="ins alert"><div class="ins-line"></div>
+    <div class="ins-ico">🔴</div>
+    <div class="ins-type">🚨 เร่งด่วน</div>
+    <div class="ins-title">ยังมี 4 เคสค้างและ 9 เคสส่งต่อ — ต้องติดตาม</div>
+    <div class="ins-body">มีเคสที่ "กำลังดำเนินการ" 4 รายการ และส่งต่อฝ่ายอื่น 9 รายการ ควรกำหนด SLA ในการ Follow Up และมีระบบแจ้งเตือนเมื่อเคสเกิน 2 วันทำการ</div>
+  </div>
+  <div class="ins info"><div class="ins-line"></div>
+    <div class="ins-ico">📞</div>
+    <div class="ins-type">💡 พฤติกรรมลูกค้า</div>
+    <div class="ins-title">วันศุกร์มีเคสสูงสุด 65 เคส — 23% ของสัปดาห์</div>
+    <div class="ins-body">วันศุกร์มีปริมาณสูงกว่าวันอื่นอย่างชัดเจน อาจเพราะโรงพยาบาลเร่งแก้ปัญหาก่อนสุดสัปดาห์ แนะนำเพิ่ม Standby Agent วันศุกร์หรือเตรียม Self-Service ไว้รองรับ</div>
+  </div>
+  <div class="ins good"><div class="ins-line"></div>
+    <div class="ins-ico">🌟</div>
+    <div class="ins-type">✅ ผลงานดีเด่น</div>
+    <div class="ins-title">เยาวรีย์ อินทร์พิทักษ์ — ปิดเคสมากที่สุด 88 เคส</div>
+    <div class="ins-body">เยาวรีย์รับเคสมากที่สุดในทีม (31.5%) และมี Resolution Rate 94.3% ควรนำมาเป็น Case Study และเป็น Mentor ให้ทีมเพื่อถ่ายทอดวิธีการแก้ปัญหา</div>
+  </div>
+</div>
+
+<div class="sec">วิเคราะห์ช่องทาง, ปัญหา และ Product</div>
+<div class="cr1">
+  <div class="cc">
+    <div class="cc-hdr"><div><div class="cc-ttl">📡 Channel Utilization</div><div class="cc-sub">สัดส่วนช่องทางที่ลูกค้าใช้ติดต่อ</div></div><span class="cc-tag">จริงจาก Excel</span></div>
+    <div class="cw"><canvas id="chanChart"></canvas></div>
+  </div>
+  <div class="cc">
+    <div class="cc-hdr"><div><div class="cc-ttl">🔥 Top Issues</div><div class="cc-sub">หมวดปัญหาที่ติดต่อเข้ามา</div></div><span class="cc-tag">Root Cause</span></div>
+    <div class="issues" id="issueList"></div>
+  </div>
+  <div class="cc">
+    <div class="cc-hdr"><div><div class="cc-ttl">🖥 Product / Module</div><div class="cc-sub">ระบบที่มีปัญหาเข้ามาสูงสุด</div></div><span class="cc-tag">Product Mix</span></div>
+    <div class="cw"><canvas id="prodChart"></canvas></div>
+  </div>
+</div>
+
+<div class="cr2">
+  <div class="cc">
+    <div class="cc-hdr"><div><div class="cc-ttl">📅 Daily Contact Volume แยกช่องทาง</div><div class="cc-sub">23–27 มีนาคม 2569 | ข้อมูลจริงจาก Excel</div></div><span class="cc-tag">Stacked Bar</span></div>
+    <div class="cw tall"><canvas id="dailyChart"></canvas></div>
+  </div>
+  <div class="cc">
+    <div class="cc-hdr"><div><div class="cc-ttl">✅ สถานะการแก้ไขเคส</div><div class="cc-sub">Resolution Status ทั้งสัปดาห์</div></div><span class="cc-tag">Status</span></div>
+    <div class="cw"><canvas id="statusChart"></canvas></div>
+    <div class="stat-legend" id="statLegend"></div>
+  </div>
+</div>
+
+<div class="sec">จังหวัดที่ติดต่อเข้ามาสูงสุด (Top 10)</div>
+<div class="cc" style="margin-bottom:22px">
+  <div class="cc-hdr"><div><div class="cc-ttl">🗺 Geographic Distribution</div><div class="cc-sub">จังหวัดที่มีปริมาณเคสสูงสุด 10 อันดับ</div></div><span class="cc-tag">Province</span></div>
+  <div class="prov-list" id="provList"></div>
+</div>
+
+<div class="sec">ผลการปฏิบัติงานรายบุคคล</div>
+<div class="tcard">
+  <table class="tbl">
+    <thead><tr>
+      <th>เจ้าหน้าที่</th><th>เคสทั้งหมด</th><th>แก้ไขเสร็จเอง</th>
+      <th>Remote แก้ไข</th><th>ส่งต่อ</th><th>FCR Rate</th>
+      <th>Resolution Rate</th><th>สถานะ</th>
+    </tr></thead>
+    <tbody id="agentBody"></tbody>
+  </table>
+</div>
+
+</div><!-- /main -->
+
+<div class="foot">จัดทำโดยทีม BMS Call Center &nbsp;·&nbsp; รายงานประจำสัปดาห์ที่ 13/2569 &nbsp;·&nbsp; ข้อมูลจาก Report 23–27 มีนาคม 2569</div>
+
+<script>
+const RAW = {
+  all: {
+    total:279, fcr:86.7, resolution:94.3, esc:3.2, pend:4,
+    channel:{'โทรศัพท์':219,'ช่องทาง E-mail':19,'ช่องทาง BMS Helpdesk':15,'ช่องทาง Line':14,'ช่องทาง Facebook':11,'ช่องทาง webboard':1},
+    issues:[
+      {label:'ตั้งค่าและใช้งานโปรแกรม',count:240,color:'#2563eb'},
+      {label:'การส่งออกข้อมูล',count:8,color:'#0ea5e9'},
+      {label:'โปรแกรมอื่นๆ',count:8,color:'#60a5fa'},
+      {label:'BMS IPD Paperless',count:7,color:'#38bdf8'},
+      {label:'BMS Kiosk ส่งตรวจ',count:7,color:'#93c5fd'},
+      {label:'BMS INVENTORY',count:5,color:'#7dd3fc'},
+      {label:'การเชื่อมต่อข้อมูล',count:4,color:'#bae6fd'},
+    ],
+    products:['BMS-HOSxP XE','BMS-HOSxP','BMS-HOSxP PCU XE','BMS IPD Paperless','BMS INVENTORY','Cloud/Others'],
+    prodData:[113,110,17,7,5,27],
+    daily:{
+      labels:['จ. 23/3','อ. 24/3','พ. 25/3','พฤ. 26/3','ศ. 27/3'],
+      phone:[34,41,41,51,52],email:[11,3,1,0,4],helpdesk:[2,2,7,1,3],line:[3,2,3,1,5],facebook:[3,2,3,3,0],
+    },
+    status:{'ดำเนินการเสร็จแล้ว':242,'Remote ดำเนินการเสร็จแล้ว':21,'ส่งต่อ-ฝ่ายอื่น':9,'กำลังดำเนินการ':4,'ยกเลิก':3},
+    provinces:[['ชลบุรี',17],['สมุทรปราการ',12],['เชียงราย',11],['สุราษฎร์ธานี',10],['ร้อยเอ็ด',9],['พะเยา',9],['ขอนแก่น',9],['อุดรธานี',7],['นครราชสีมา',7],['กระบี่',7]],
+    agents:[
+      {name:'เยาวรีย์ อินทร์พิทักษ์',total:88,done:83,remote:6,esc:3},
+      {name:'ประภัสสร พรมสุข',total:66,done:63,remote:4,esc:2},
+      {name:'เอมอร สมหวัง',total:63,done:57,remote:5,esc:2},
+      {name:'ชัชมนต์ เชาว์วรรธนะสกุล',total:62,done:60,remote:6,esc:2},
+    ],
+  }
+};
+const CF={'โทรศัพท์':{total:219,fcr:87.2,resolution:95.0,esc:2.7,pend:3},'ช่องทาง E-mail':{total:19,fcr:84.2,resolution:94.7,esc:5.3,pend:1},'ช่องทาง BMS Helpdesk':{total:15,fcr:86.7,resolution:93.3,esc:6.7,pend:0},'ช่องทาง Line':{total:14,fcr:85.7,resolution:92.9,esc:7.1,pend:0},'ช่องทาง Facebook':{total:11,fcr:81.8,resolution:90.9,esc:9.1,pend:0}};
+const AF={'เยาวรีย์ อินทร์พิทักษ์':{total:88,fcr:94.3,resolution:98.9,esc:3.4,pend:2},'ประภัสสร พรมสุข':{total:66,fcr:95.5,resolution:98.5,esc:3.0,pend:1},'เอมอร  สมหวัง':{total:63,fcr:90.5,resolution:96.8,esc:3.2,pend:1},'ชัชมนต์  เชาว์วรรธนะสกุล':{total:62,fcr:96.8,resolution:98.4,esc:3.2,pend:0}};
+const BLUE=['#2563eb','#0ea5e9','#60a5fa','#38bdf8','#93c5fd','#bfdbfe'];
+const SCOL=['#2563eb','#38bdf8','#f59e0b','#ef4444','#94a3b8'];
+let c1,c2,c3,c4;
+
+function initCharts(d){
+  const fnt={family:'Sarabun',size:11}, tc='#64748b', gc='#e2e8f0';
+  const base={animation:{duration:500},plugins:{legend:{labels:{font:fnt,color:tc,boxWidth:12,padding:12}}}};
+  if(c1)c1.destroy();
+  const ck=Object.keys(d.channel),cv=Object.values(d.channel);
+  c1=new Chart(document.getElementById('chanChart'),{type:'doughnut',data:{labels:ck.map(k=>k.replace('ช่องทาง ','').replace('ช่องทาง','').trim()),datasets:[{data:cv,backgroundColor:BLUE,borderWidth:2.5,borderColor:'#fff',hoverOffset:10}]},options:{...base,cutout:'62%',plugins:{...base.plugins,tooltip:{callbacks:{label:ctx=>` ${ctx.label}: ${ctx.raw} เคส (${Math.round(ctx.raw/cv.reduce((a,b)=>a+b,0)*100)}%)`}}}}});
+  if(c2)c2.destroy();
+  c2=new Chart(document.getElementById('prodChart'),{type:'bar',data:{labels:d.products,datasets:[{label:'เคส',data:d.prodData,backgroundColor:BLUE,borderRadius:6,borderSkipped:false}]},options:{...base,indexAxis:'y',scales:{x:{ticks:{font:fnt,color:tc},grid:{color:gc}},y:{ticks:{font:{...fnt,size:10},color:tc},grid:{display:false}}},plugins:{...base.plugins,legend:{display:false},tooltip:{callbacks:{label:ctx=>` ${ctx.raw} เคส`}}}}});
+  if(c3)c3.destroy();
+  const dcol=['rgba(37,99,235,.82)','rgba(14,165,233,.82)','rgba(96,165,250,.82)','rgba(125,211,252,.82)','rgba(147,197,253,.82)'];
+  c3=new Chart(document.getElementById('dailyChart'),{type:'bar',data:{labels:d.daily.labels,datasets:[{label:'📞 โทรศัพท์',data:d.daily.phone,backgroundColor:dcol[0],borderRadius:4,stack:'s'},{label:'📧 E-mail',data:d.daily.email,backgroundColor:dcol[1],borderRadius:4,stack:'s'},{label:'🖥 Helpdesk',data:d.daily.helpdesk,backgroundColor:dcol[2],borderRadius:4,stack:'s'},{label:'💬 Line',data:d.daily.line,backgroundColor:dcol[3],borderRadius:4,stack:'s'},{label:'📘 Facebook',data:d.daily.facebook,backgroundColor:dcol[4],borderRadius:4,stack:'s'}]},options:{...base,scales:{y:{stacked:true,ticks:{font:fnt,color:tc},grid:{color:gc}},x:{stacked:true,ticks:{font:fnt,color:tc},grid:{display:false}}},plugins:{...base.plugins,tooltip:{callbacks:{title:ctx=>ctx[0].label,label:ctx=>` ${ctx.dataset.label}: ${ctx.raw} เคส`}}}}});
+  if(c4)c4.destroy();
+  const sk=Object.keys(d.status),sv=Object.values(d.status);
+  c4=new Chart(document.getElementById('statusChart'),{type:'doughnut',data:{labels:sk,datasets:[{data:sv,backgroundColor:SCOL,borderWidth:2.5,borderColor:'#fff',hoverOffset:10}]},options:{...base,cutout:'58%',plugins:{...base.plugins,legend:{display:false},tooltip:{callbacks:{label:ctx=>` ${ctx.label}: ${ctx.raw} เคส (${Math.round(ctx.raw/sv.reduce((a,b)=>a+b,0)*100)}%)`}}}}});
+  document.getElementById('statLegend').innerHTML=sk.map((k,i)=>`<div class="sl-item"><div class="sl-dot" style="background:${SCOL[i]}"></div>${k}: <strong>${sv[i]}</strong></div>`).join('');
+}
+function renderIssues(issues){
+  const max=issues[0].count,rk=['rk1','rk2','rk3','rk4','rk5','rk6','rk7'];
+  document.getElementById('issueList').innerHTML=issues.map((is,i)=>`<div class="ir"><div class="irk ${rk[i]}">${i+1}</div><div class="irlbl" title="${is.label}">${is.label}</div><div class="irbw"><div class="irb" style="width:${Math.round(is.count/max*100)}%;background:${is.color}"></div></div><div class="irct">${is.count}</div></div>`).join('');
+}
+function renderProvinces(p){
+  const mx=p[0][1];
+  document.getElementById('provList').innerHTML=p.map(r=>`<div class="prov-row"><div class="prov-name">${r[0]}</div><div class="prov-bw"><div class="prov-fill" style="width:${Math.round(r[1]/mx*100)}%"></div></div><div class="prov-ct">${r[1]}</div></div>`).join('');
+}
+function renderAgents(agents){
+  document.getElementById('agentBody').innerHTML=agents.map((a,i)=>{
+    const f=Math.round(a.done/a.total*100),r=Math.round((a.done+a.remote)/a.total*100);
+    const st=r>=95?['pg','🌟 ดีเยี่ยม']:r>=90?['pg','✅ ดี']:['py','⚠️ ปานกลาง'];
+    return`<tr><td><strong>${a.name}</strong>${i===0?' <span class="pill pb">Top Agent</span>':''}</td><td><strong>${a.total}</strong></td><td>${a.done}</td><td><span class="pill pb">${a.remote}</span></td><td>${a.esc>0?`<span class="pill py">${a.esc}</span>`:'–'}</td><td><strong>${f}%</strong></td><td>${r}%</td><td><span class="pill ${st[0]}">${st[1]}</span></td></tr>`;
+  }).join('');
+}
+function updateKPIs(total,fcr,res,esc,pend,extra){
+  document.getElementById('kv-total').textContent=total.toLocaleString();
+  document.getElementById('kv-fcr').textContent=fcr+'%';
+  document.getElementById('kv-res').textContent=res+'%';
+  document.getElementById('kv-esc').textContent=esc+'%';
+  document.getElementById('kv-pend').textContent=pend;
+  document.getElementById('kp-fcr').style.width=fcr+'%';
+  document.getElementById('kp-res').style.width=res+'%';
+  if(extra)document.getElementById('kb-total').textContent=extra;
+}
+function applyFilter(){
+  const ch=document.getElementById('chanFilter').value,ag=document.getElementById('agentFilter').value,d=RAW.all;
+  if(ag!=='all'){const a=AF[ag]||AF[Object.keys(AF).find(k=>k.includes(ag.split(' ')[0]))]||{};updateKPIs(a.total||d.total,a.fcr||d.fcr,a.resolution||d.resolution,a.esc||d.esc,a.pend||d.pend,`👤 ${ag.split(' ')[0]}`);}
+  else if(ch!=='all'){const c=CF[ch]||{};updateKPIs(c.total||d.total,c.fcr||d.fcr,c.resolution||d.resolution,c.esc||d.esc,c.pend||d.pend,`📡 ${ch.replace('ช่องทาง ','')}`);}
+  else updateKPIs(d.total,d.fcr,d.resolution,d.esc,d.pend,'📅 จ.–ศ. 23–27 มี.ค.');
+  initCharts(d);renderIssues(d.issues);renderProvinces(d.provinces);renderAgents(d.agents);
+}
+document.addEventListener('DOMContentLoaded',applyFilter);
+</script>
+</body>
+</html>
